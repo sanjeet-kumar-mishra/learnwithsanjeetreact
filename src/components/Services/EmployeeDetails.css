@@ -1,0 +1,11 @@
+h5 {
+    color: rgb(255, 255, 255);
+}
+
+span {
+    color: blue;
+    padding: 10px;
+    background: -webkit-linear-gradient(rgb(219, 232, 255), rgb(1, 102, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
