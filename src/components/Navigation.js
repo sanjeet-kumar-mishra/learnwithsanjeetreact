@@ -23,7 +23,7 @@ const Navigation = () => {
                                     Services
                                 </Link>
                                 <ul className="dropdown-menu fw-bold text-white">
-                                    <li><Link className="dropdown-item fw-semibold text-white" to="/">Manpower Calculator</Link></li>
+                                    <li><Link className="dropdown-item fw-semibold text-white" to="/services/manpowercalc">Manpower Calculator</Link></li>
                                     <li><Link className="dropdown-item fw-semibold text-white" to="/">MMR Calculator</Link></li>
                                     <li><Link className="dropdown-item fw-semibold text-white" to="/services/employeedetails">Employee Details</Link></li>
                                     <li><Link className="dropdown-item fw-semibold text-white" to="/">Detailed Report</Link></li>

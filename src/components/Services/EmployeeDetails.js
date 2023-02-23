@@ -4,20 +4,16 @@ import "./EmployeeDetails.css"
 
 const EmployeeDetails = () => {
 
-    // For Sending Data to Server
-    const [data, setData] = useState({})
+    const [data, setData] = useState('')
+    const [employee, setEmployee] = useState('')
 
-    const [employee, setEmployee] = useState([])
-
-    const handleSubmit = async (event) => {
-        event.preventDefault()
+    const handleSubmit = async (e) => {
+        e.preventDefault()
 
         const response = await fetch('/services/employeedetails', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            headers: { 'Content-Type': 'application/json', },
+            body: JSON.stringify({ data })
         })
         const result = await response.json()
         console.log(result)
@@ -25,9 +21,9 @@ const EmployeeDetails = () => {
     }
 
     const handleChange = (e) => {
-        setData({ ...data, [e.target.name]: e.target.value })
+        setData(e.target.value)
     }
-    
+
     return (
         <>
             <div className="container">
@@ -45,20 +41,10 @@ const EmployeeDetails = () => {
                         </div>
                     </form>
                 </div>
-                
+
                 <div className="row">
 
                     <h5 className="py-1">Name:<span> {employee.NAME}</span></h5>
-                    <h5 className="py-1">Emp Code:<span> {employee.Emp_Code}</span></h5>
-                    <h5 className="py-1">Card No:<span> {employee.CARDNO}</span></h5>
-                    <h5 className="py-1">DOJ:<span> {employee.DOJ}</span></h5>
-                    <h5 className="py-1">UAN No:<span> {employee.PF_UAN_NO}</span></h5>
-                    <h5 className="py-1">ESIC No:<span> {employee.ESINO}</span></h5>
-                    <h5 className="py-1">Department:<span> {employee.DEPARTMENT}</span></h5>
-                    <h5 className="py-1">Sub-Department:<span> {employee.SUBDEPT}</span></h5>
-                    <h5 className="py-1">Designation:<span> {employee.DEISG}</span></h5>
-                    <h5 className="py-1">Unit:<span> {employee.UNIT}</span></h5>
-                    <h5 className="py-1">Line No:<span> {employee.Line}</span></h5>
 
                 </div>
             </div>

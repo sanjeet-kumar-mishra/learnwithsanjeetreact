@@ -6,6 +6,7 @@ import ContactUs from './components/ContactUs';
 import Footer from "./components/Footer"
 import AboutDev from './components/AboutDev';
 import EmployeeDetails from './components/Services/EmployeeDetails';
+import ManpowerCalc from './components/Services/ManpowerCalc';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contactus" exact element={<ContactUs />} />
           <Route path="/aboutdev" exact element={<AboutDev />} />
           <Route path="/services/employeedetails" exact element={<EmployeeDetails />} />
+          <Route path="/services/manpowercalc" exact element={<ManpowerCalc />} />
         </Routes>
         <Footer />
       </Router>
