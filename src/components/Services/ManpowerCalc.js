@@ -59,7 +59,7 @@ const ManpowerCalc = () => {
         const sewingopt3 = exceljson.filter(function (el) {
             return el["Department"] === "PRODUCTION" &&
                 el["Sub-department"] === "SEWING" &&
-                el["Designation"] === "ASSISTANT"
+                el["Designation"] === "ASSISTANT "
         }
         )
         const sewingopt4 = exceljson.filter(function (el) {
@@ -150,7 +150,7 @@ const ManpowerCalc = () => {
         const prodwr = exceljson.filter(function (el) {
             return el["Department"] === "PRODUCTION" &&
                 el["Sub-department"] === "SEWING" &&
-                el["Designation"] === "PRODUCTION"
+                el["Designation"] === "PRODUCTION "
         }
         )
         const worksup = exceljson.filter(function (el) {
